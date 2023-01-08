@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fidget-Spinner</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body {
+        background: #09042a;
+
+        height: 100vh;
+      }
+
+      div {
+        width: 200px;
+        height: 45px;
+        background: #e78481;
+
+        border-radius: 50px;
+
+        position: relative;
+      }
+
+      div::before,
+      div::after,
+      span {
+        content: "";
+
+        display: inline-block;
+
+        width: 60px;
+        height: 60px;
+
+        border-radius: 50%;
+        border: #09042a 10px solid;
+        background: #f5bb9c;
+      }
+
+      div::before {
+        transform: translateY(-52px);
+      }
+
+      div::after {
+        position: absolute;
+        transform: translateY(52px);
+      }
+
+      span {
+        box-shadow: 0 0 0 10px #e78481;
+
+        background: #09042a;
+
+        position: absolute;
+      }
+
+      span:first-child {
+        left: 0;
+        transform: translateX(10px);
+      }
+
+      span:last-child {
+        right: 0;
+        transform: translateX(-10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>
